@@ -71,17 +71,6 @@ WHERE category = 'Clothing'
 AND quantity > 4
 AND sale_date BETWEEN '2022-11-01' AND '2022-11-30';
 
---OR
-
-SELECT 
-  *
-FROM retail_sales
-WHERE 
-    category = 'Clothing'
-    AND 
-    TO_CHAR(sale_date, 'YYYY-MM') = '2022-11'
-    AND
-    quantity > 4;
 
 --Write a SQL query to calculate the total sales (total_sale) for each category.:
 SELECT category, SUM(total_sale) AS net_sale, 
@@ -152,6 +141,7 @@ SELECT
     COUNT(*) as total_orders    
 FROM hourly_sale
 GROUP BY shift
+
 
 
 
